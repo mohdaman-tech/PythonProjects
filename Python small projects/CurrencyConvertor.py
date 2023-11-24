@@ -1,2 +1,0 @@
-import tkinter as tkinter
-from currency_converter import CurrencyConvertor
