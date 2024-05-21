@@ -1,3 +1,3 @@
 # Web2
-After Grad Projects
+Grad Projects
 Python Backend
