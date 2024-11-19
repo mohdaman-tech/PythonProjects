@@ -1,3 +1,1 @@
-# Web2
-Grad Projects
-Python Backend
+#Small Python Projects
