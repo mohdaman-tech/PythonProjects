@@ -70,5 +70,51 @@ def get_current_state(mat):
 
     # else lost
     return 'LOST'
+    
+# all the functions defined below
+# are for left swap initially.
+
+# function to compress the grid
+# after every step before and
+# after merging cells.
+def compress(mat):
+
+    # bool variable to determine
+    # any change happened or not
+    changed = False
+
+    # empty grid 
+    new_mat = []
+
+    # with all cells empty
+    for i in range(4):
+        new_mat.append([0] * 4)
+        
+    # here we will shift entries
+    # of each cell to it's extreme
+    # left row by row
+    # loop to traverse rows
+    for i in range(4):
+        pos = 0
+
+        # loop to traverse each column
+        # in respective row
+        for j in range(4):
+            if(mat[i][j] != 0):
+                
+                # if cell is non empty then
+                # we will shift it's number to
+                # previous empty cell in that row
+                # denoted by pos variable
+                new_mat[i][pos] = mat[i][j]
+                
+                if(j != pos):
+                    changed = True
+                pos += 1
+
+    # returning new compressed matrix
+    # and the flag variable.
+    return new_mat, changed
+
 
 
