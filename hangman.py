@@ -27,3 +27,15 @@ while guesses_left > 0:
     if guess in guessed_letters:
         print('You already guessed that letter.')
         continue
+# Add the guessed letter to the set of guessed letters
+    guessed_letters.add(guess)
+
+    # Check if the guess is correct
+    if guess in word:
+        print('Correct guess!')
+        if set(word) == guessed_letters:
+            print('You win!')
+            break
+    else:
+        guesses_left -= 1
+        print('Incorrect guess. Guesses left:', guesses_left)
